@@ -1,16 +1,135 @@
-# React + Vite
+# 🚀 Job Portal (Work In Progress)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Job Portal Web Application** built using **React, Vite, Tailwind CSS, and shadcn/ui**.
+This platform aims to connect job seekers with recruiters through a clean, fast, and user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Project Status
 
-## React Compiler
+🚧 **Work In Progress**
+This project is actively being developed. New features and improvements are being added regularly.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features (Current & Planned)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Implemented
+
+* ⚡ Vite + React setup
+* 🎨 Tailwind CSS v4 integration
+* 🧩 shadcn/ui components integration
+* 🏗️ Basic project structure
+* 📄 Landing page setup
+* 🔀 Routing with React Router
+
+---
+
+### 🚧 In Progress
+
+* 🔐 Authentication (Login / Signup)
+* 🧑 User dashboard
+* 📃 Job listings UI
+* 🏢 Recruiter dashboard
+* 🔍 Search & filter jobs
+
+---
+
+### 🔮 Planned Features
+
+* 📬 Apply for jobs
+* 💼 Save jobs
+* 📊 Profile management
+* 📈 Admin panel
+* 🌙 Dark mode
+* 🔔 Notifications
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ React (Vite)
+* 🎨 Tailwind CSS (v4)
+* 🧩 shadcn/ui
+* 🔀 React Router
+* 📦 JavaScript (ES6+)
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+ ├── components/
+ │    └── ui/          # shadcn components
+ ├── pages/            # Application pages
+ ├── Layouts/          # Layout components
+ ├── lib/              # Utility functions
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/pavan050505/job-portal.git
+
+# Navigate to project folder
+cd job-portal
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+---
+
+## 🚀 Usage
+
+Open in browser:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 📸 Screenshots
+
+*(Coming Soon)*
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+If you'd like to contribute, feel free to fork the repo and submit a pull request.
+
+---
+
+## 📌 Author
+
+**Pavan Bhosle**
+
+* GitHub: https://github.com/pavan050505
+
+---
+
+## ⭐ Support
+
+If you like this project, please ⭐ the repository to support development.
+
+---
+
+## 📢 Note
+
+This project is under active development, so features and UI may change frequently.
+
+---
+
+🔥 *More updates coming soon... Stay tuned!*
