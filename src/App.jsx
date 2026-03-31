@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
 import './App.css'
-import { Children } from "react"
 import { RouterProvider } from "react-router-dom"
 import AppLayout from "./Layouts/app-layout"
 import { createBrowserRouter } from "react-router-dom"
@@ -12,7 +11,13 @@ import MyJobs from "./pages/my-jobs"
 import PostJob from "./pages/post-job"
 import SaveJobs from "./pages/saved-job"
 import { ThemeProvider } from "./components/theme-provider"
+import { ClerkProvider } from "@clerk/clerk-react"
 
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 const router = createBrowserRouter([
   {
@@ -54,7 +59,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <RouterProvider router={router} />
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+        <RouterProvider router={router} />
+      </ClerkProvider>
     </ThemeProvider>
   )
 }
