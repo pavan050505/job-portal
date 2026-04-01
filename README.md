@@ -31,7 +31,6 @@ This project is actively being developed. New features and improvements are bein
 * 🧑 User dashboard
 * 📃 Job listings UI
 * 🏢 Recruiter dashboard
-* 🔍 Search & filter jobs
 
 ---
 
