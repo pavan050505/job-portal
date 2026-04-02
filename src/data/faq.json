@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is Hirrd?",
+    "answer": "Hirrd is a modern job portal platform that connects job seekers with employers."
+  },
+  {
+    "question": "How do I create an account?",
+    "answer": "You can sign up using email or social login through the authentication system."
+  },
+  {
+    "question": "How do I log in?",
+    "answer": "Click on the login button and enter your credentials or use social authentication."
+  },
+  {
+    "question": "How do I post a job?",
+    "answer": "Employers can post jobs by navigating to the 'Post Job' section and filling out the form."
+  },
+  {
+    "question": "How can I search for jobs?",
+    "answer": "Use the search bar and filters to find jobs based on keywords, location, and category."
+  },
+  {
+    "question": "How do I apply for a job?",
+    "answer": "Click on a job listing and press the 'Apply' button to submit your application."
+  },
+  {
+    "question": "Can I save jobs for later?",
+    "answer": "Yes, you can bookmark jobs by clicking the save icon."
+  }
+]

@@ -117,6 +117,16 @@
     --sidebar-ring: oklch(0.556 0 0);
 }
 
+@layer utilities {
+  .gradient {
+    @apply bg-gradient-to-br from-gray-500 via-gray-500 to-white;
+  }
+
+  .gradient-title {
+    @apply bg-gradient-to-br from-gray-500 via-gray-500 to-white text-transparent bg-clip-text;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
