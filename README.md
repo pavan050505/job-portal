@@ -104,9 +104,6 @@ http://localhost:5173/
 
 <img width="1891" height="890" alt="Screenshot 2026-04-02 234751" src="https://github.com/user-attachments/assets/2dba55c3-4020-4f03-a8c2-1f9da2c34e61" />
 
-
-> 📌 Tip: You can drag & drop images directly into GitHub README and it will auto-generate the link.
-
 ---
 
 ## 🤝 Contributing
