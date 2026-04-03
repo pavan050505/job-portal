@@ -1,4 +1,4 @@
-# 🚀 Job Portal (Work In Progress)
+🚀 Job Portal (Work In Progress)
 
 A modern **Job Portal Web Application** built using **React, Vite, Tailwind CSS, and shadcn/ui**.
 This platform aims to connect job seekers with recruiters through a clean, fast, and user-friendly interface.
@@ -100,7 +100,12 @@ http://localhost:5173/
 
 ## 📸 Screenshots
 
-*(Coming Soon)*
+### 🏠 Landing Page
+
+<img width="1891" height="890" alt="Screenshot 2026-04-02 234751" src="https://github.com/user-attachments/assets/2dba55c3-4020-4f03-a8c2-1f9da2c34e61" />
+
+
+> 📌 Tip: You can drag & drop images directly into GitHub README and it will auto-generate the link.
 
 ---
 
