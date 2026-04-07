@@ -12,6 +12,7 @@ import PostJob from "./pages/post-job"
 import SaveJobs from "./pages/saved-job"
 import { ThemeProvider } from "./components/theme-provider"
 import { ClerkProvider } from "@clerk/clerk-react"
+import ProtectedRoute from "./components/protected-route"
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -29,27 +30,51 @@ const router = createBrowserRouter([
       },
       {
         path:"/onboarding",
-        element:<Onboarding />
+        element:(
+        <ProtectedRoute>
+        <Onboarding />
+        </ProtectedRoute>
+        ),
       },
       {
         path:"/job-listing",
-        element:<JobListing />
+        element:(
+        <ProtectedRoute>
+        <JobListing />
+        </ProtectedRoute>
+        ),
       },
       {
         path:"/job",
-        element:<JobPage />
+        element:(
+          <ProtectedRoute>
+            <JobPage />
+          </ProtectedRoute>
+        )
       },
       {
         path:"/my-jobs",
-        element:<MyJobs />
+        element:(
+          <ProtectedRoute>
+            <MyJobs />
+          </ProtectedRoute>
+        )
       },
       {
         path:"/post-job",
-        element:<PostJob />
+        element:(
+          <ProtectedRoute>
+            <PostJob />
+          </ProtectedRoute>
+        )
       },
       {
         path:"/saved-jobs",
-        element:<SaveJobs />
+        element:(
+          <ProtectedRoute>
+            <SaveJobs />
+          </ProtectedRoute>
+        )
       }
     ]
   },
