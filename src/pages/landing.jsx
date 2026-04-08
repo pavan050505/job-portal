@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import companies from "../data/companies.json";
@@ -6,8 +6,15 @@ import faqs from "../data/faq.json";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardHeader, CardTitle, CardAction, CardContent } from "@/components/ui/card";
+import { useUser } from "@clerk/clerk-react";
 
 const LandingPage = () => {
+  const { user, isSignedIn, isLoaded } = useUser();
+
+  if (isLoaded && isSignedIn && !user?.unsafeMetadata?.role && !user?.publicMetadata?.role) {
+    return <Navigate to="/onboarding" replace />;
+  }
+
   return (
     <main className="flex flex-col gap-10 py-10 sm:py-20">
       <section className="text-center">
@@ -22,7 +29,7 @@ const LandingPage = () => {
         </p>
       </section>
       <div className="flex gap-6 justify-center">
-        <Link to="/job-listing">
+        <Link to="/job">
           <Button variant="outline" size="lg">Find Jobs</Button>
         </Link>
         <Link to="/post-job">

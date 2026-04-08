@@ -6,6 +6,7 @@ import { BriefcaseBusiness } from "lucide-react";
 
 const Header = () => {
     const [search, setSearch] = useSearchParams();
+    const { user } = useUser();
     const [showSignIn, setShowSignIn] = React.useState(false);
     const { isLoaded } = useUser();
 
@@ -36,11 +37,13 @@ const Header = () => {
                             </Button>
                         </SignedOut>
                         <SignedIn>
-                            <Link to="/post-job">
+                            {user?.unsafeMetadata?.role === "recruiter" && (
+                                <Link to="/post-job">
                                 <Button variant="destructive" className="rounded-full">
+                                    <BriefcaseBusiness className="mr-2" size={18} />
                                     Post a Job
                                 </Button>
-                            </Link>
+                            </Link>)}
                             <UserButton
                                 appearance={{
                                     elements: {

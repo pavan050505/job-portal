@@ -4,7 +4,7 @@ import { RouterProvider } from "react-router-dom"
 import AppLayout from "./Layouts/app-layout"
 import { createBrowserRouter } from "react-router-dom"
 import LandingPage from "./pages/landing"
-import Onboarding from "./pages/Onboarding"
+import Onboarding from "./pages/onboarding"
 import JobListing from "./pages/job-listing"
 import JobPage from "./pages/job"
 import MyJobs from "./pages/my-jobs"
@@ -37,20 +37,12 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path:"/job-listing",
+        path:"/job",
         element:(
         <ProtectedRoute>
         <JobListing />
         </ProtectedRoute>
         ),
-      },
-      {
-        path:"/job",
-        element:(
-          <ProtectedRoute>
-            <JobPage />
-          </ProtectedRoute>
-        )
       },
       {
         path:"/my-jobs",
@@ -74,6 +66,18 @@ const router = createBrowserRouter([
           <ProtectedRoute>
             <SaveJobs />
           </ProtectedRoute>
+        )
+      },
+      {
+        path: "*",
+        element: (
+          <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+            <h1 className="text-4xl font-bold gradient-title">404 - Page Not Found</h1>
+            <p className="text-gray-400">The page you are looking for doesn't exist.</p>
+            <Button variant="outline" onClick={() => window.location.href = "/"}>
+              Go Home
+            </Button>
+          </div>
         )
       }
     ]
