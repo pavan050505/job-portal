@@ -133,4 +133,4 @@ This project is under active development, so features and UI may change frequent
 
 ---
 
-🔥 *More updates coming soon... Stay tuned!*
+🔥 *More updates coming soon... Stay tuned! *
