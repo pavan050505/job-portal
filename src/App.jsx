@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import './App.css'
-import { RouterProvider } from "react-router-dom"
+import { RouterProvider, Link } from "react-router-dom"
 import AppLayout from "./Layouts/app-layout"
 import { createBrowserRouter } from "react-router-dom"
 import LandingPage from "./pages/landing"
@@ -73,10 +73,10 @@ const router = createBrowserRouter([
         element: (
           <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
             <h1 className="text-4xl font-bold gradient-title">404 - Page Not Found</h1>
-            <p className="text-gray-400">The page you are looking for doesn't exist.</p>
-            <Button variant="outline" onClick={() => window.location.href = "/"}>
-              Go Home
-            </Button>
+            <p className="text-gray-400 text-center">The page you are looking for doesn't exist.</p>
+            <Link to="/">
+              <Button variant="outline">Go Home</Button>
+            </Link>
           </div>
         )
       }

@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { useUser } from "@clerk/clerk-react"
 import { BarLoader } from 'react-spinners';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import { Button } from "../components/ui/button";
 
 const Onboarding = () => {
@@ -12,23 +11,21 @@ const Onboarding = () => {
     await user.update({
       unsafeMetadata: { role }
     }).then(() => {
-      navigate('/job');
+      navigate('/job', { replace: true });
     })
     .catch((error) => {
       console.error("Error updating user role:", error);
     });
   };
 
-  useEffect(() => {
-    if (user?.unsafeMetadata?.role || user?.publicMetadata?.role) {
-      navigate('/job', { replace: true });
-    }
-  }, [user, navigate]);
-
-
   if (!isLoaded) {
     return <BarLoader className="mt-4" width={"100%"} color="#36d7b7"/>
   }
+
+  if (user?.unsafeMetadata?.role) {
+    return <Navigate to="/job" replace />;
+  }
+
   return(
     <div className="flex flex-col items-center justify-center mt-32">
       <h2 className="gradient-title font-extrabold text-7xl sm:text-8xl tracking-tighter">I am a...</h2>
